@@ -20,7 +20,7 @@ http://blog.csdn.net/immiao/article/details/22199939
      }
  }
 
-
+#P.S.: I can understand this method.
 https://www.cnblogs.com/dolphin0520/archive/2011/08/27/2155542.html
 2. path[i][j]=path[k][j]; //path[i][j]记录从i到j的最短路径上j的前一个顶点
 
