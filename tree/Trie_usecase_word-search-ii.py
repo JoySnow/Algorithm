@@ -1,9 +1,11 @@
 """
-AC code of Question:
-    https://leetcode.com/problems/implement-trie-prefix-tree/
-Basic trie.
-"""
+https://leetcode.com/problems/word-search-ii/description/
 
+Detail:
+    Most of others are using Trie & DFS(recusive).
+    Not sure if there are any other approch.
+    Wait to see ...
+"""
 class Trie(object):
 
     def __init__(self):
@@ -33,8 +35,6 @@ class Trie(object):
             print level
         level[0] = 1
         print self.root
-
-
 
     def search(self, word):
         """
@@ -81,16 +81,27 @@ class Trie(object):
         return True
 
 
-# Your Trie object will be instantiated and called as such:
-obj = Trie()
-word = 'jay'
-prefix = 'ja'
-obj.insert(word)
-param_2 = obj.search(word)
-param_4 = obj.search(word[:2])
-assert param_2 is True
-assert param_4 is False
-print obj.startsWith('')
-print obj.startsWith('j')
-print obj.startsWith('ja')
-print obj.startsWith('jay')
+class Solution(object):
+    def findWords(self, board, words):
+        """
+        :type board: List[List[str]]
+        :type words: List[str]
+        :rtype: List[str]
+        """
+        char_index = self._get_char_index(board)
+        trie = Trie()
+        for word in words:
+            trie.search
+
+        
+    def _get_char_index(self, board):
+        M = len(board)
+        N = len(board[0]) if M else 0
+        res = []*27
+        for i in xrange(0, M):
+            for j in xrange(0, N):
+                char = ord(board[i][j]) - 96
+                res[char].append((i, j))
+        return res
+
+
